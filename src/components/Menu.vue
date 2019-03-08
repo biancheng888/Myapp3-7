@@ -71,29 +71,34 @@
 </template>
 
 <script>
-
+import axios from "axios"
 export default {
   name: 'Menu',
   data(){
     return{
       pizza:[
-        {
-          name:"榴莲披萨",
-          describe:"口味独特，深受广大消费者喜爱！",
-          options:[
-            {size:"8寸",price:100},{size:"10寸",price:120}
-          ]
-        },
-        {
-          name:"芝士披萨",
-          describe:"口味鲜美，深受广大消费者喜爱！",
-          options:[
-            {size:"6寸",price:100},{size:"10寸",price:120}
-          ]
-        }
+        // {
+        //   name:"榴莲披萨",
+        //   describe:"口味独特，深受广大消费者喜爱！",
+        //   options:[
+        //     {size:"8寸",price:100},{size:"10寸",price:120}
+        //   ]
+        // },
+        // {
+        //   name:"芝士披萨",
+        //   describe:"口味鲜美，深受广大消费者喜爱！",
+        //   options:[
+        //     {size:"6寸",price:100},{size:"10寸",price:120}
+        //   ]
+        // }
       ],
       newpizza:[]
     }
+  },
+  mounted(){
+    axios.get("./newmenu.json").then((res)=>{
+        this.pizza=res.data
+    })
   },
   computed:{
     totalPrice(){

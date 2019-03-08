@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 
 //一级路由
+import Bmap from '@/components/Bmap'
 import Home from '@/components/Home'
 import Menu from '@/components/Menu'
 import AboutUs from '@/components/AboutUs'
@@ -27,6 +28,10 @@ Vue.use(Router)
 
 export default new Router({
     routes: [{
+        path: '/bmap',
+        name: 'Bmap',
+        component: Bmap
+    }, {
         path: '/',
         name: 'Home',
         // component: Home

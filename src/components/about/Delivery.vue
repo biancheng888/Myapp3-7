@@ -1,6 +1,5 @@
 <template>
   <div id="delivery">
-  
     <div class="row">
       <div class="card col-4" style="width: 18rem;" v-for="(item,index) in items" :key="index">
         <img class="card-img-top" :src="item.imgsrc" alt="Card image cap">

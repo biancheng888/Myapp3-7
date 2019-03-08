@@ -11,7 +11,7 @@ export default {
   name: 'App',
   components:{Header},
   // template:"<Header/>"
-
+  
 }
 </script>
 
@@ -24,4 +24,5 @@ export default {
   color: #2c3e50;
   /* margin-top: 1px; */
 }
+
 </style>

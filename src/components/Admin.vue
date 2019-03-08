@@ -1,24 +1,31 @@
 <template>
   <div id="admin" class="container">
     <div class="row">
-          <form class="col-6 mt-3">
-            <h3 class="text-danger">添加新pizza</h3>
-        <div class="form-group">
-      
-      <input type="email" class="form-control" placeholder="pizza名称">
-        </div>
-        <div class="form-group">
-         <textarea cols="70" rows="2" placeholder="pizza名称"></textarea>
-        </div>
-      </form>
+      <div class="col-7">
+        <AddPizza/>
+      </div>
+      <div class="col-5">
+          <Controlmenu/>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-
+import AddPizza from "@/components/AddPizza"
+import Controlmenu from "@/components/Controlmenu"
 export default {
   name: 'Admin',
+  data(){
+    return{
+
+    }
+  },
+  components:{
+    "AddPizza":AddPizza,
+    // AddPizza   或者只写一个
+    Controlmenu
+  }
   
 }
 </script>
